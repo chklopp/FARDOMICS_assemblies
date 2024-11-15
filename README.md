@@ -75,6 +75,14 @@ merqury.sh hifi.meryl hifiasm_0.18.8_Lo_no_HiC.bp.p_ctg.gfa.fa merqury_out
 
 ```
 
+## finding mito genome with MitoHIFI
+```
+module load containers/singularity/3.9.9
+module load bioinfo/souporcell/2.5
+
+singularity exec -B path_to_your_working_dir -B /usr/local/bioinfo/src  MITOHIFI_HOME/mitohifi.sif mitohifi.py -c hifiasm_0.18.8_Lo_no_HiC.bp.p_ctg.gfa.fa  -f Ref_mitochondrion.fasta -g Ref_mitochondrion.gb -t 4
+
+```
 
 ## assembly scaffolding with juicer, 3D-dna and juicebox
 ```
